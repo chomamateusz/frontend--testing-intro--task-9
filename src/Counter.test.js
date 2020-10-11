@@ -16,4 +16,12 @@ describe('Counter class tests', () => {
         expect(typeof counter1.number).toBe('number')
     })
 
+    it('3. should start from `0` or value specified in first argument of the constructor', () => {
+        const counter1 = new Counter()
+        const counter2 = new Counter(14)
+
+        expect(counter1.number).toBe(0)
+        expect(counter2.number).toBe(14)
+    })
+
 })
