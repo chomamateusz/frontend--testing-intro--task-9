@@ -44,6 +44,17 @@ describe('DecreasingCounter render', () => {
 
         const counter1 = new DecreasingCounter()
 
+        expect(counter1 instanceof Counter).toBe(true)
+        expect(counter1).toBeInstanceOf(Counter)
+        expect(counter1 instanceof DecreasingCounter).toBe(true)
+        expect(counter1).toBeInstanceOf(DecreasingCounter)
+
+    })
+
+    it('should render when `.dec` is called', () => {
+
+        const counter1 = new DecreasingCounter()
+
         counter1.dec() // second render
 
         expect(counter1.render).toHaveBeenCalledTimes(2)
