@@ -1,15 +1,17 @@
-import { number, inc, dec, reset } from './Counter'
+import * as Counter from './Counter'
 
-console.log(number) // 0
+console.log(Counter.number) // 0
 
-inc()
-inc()
-inc()
+Counter.inc()
+Counter.inc()
+Counter.inc()
 
-dec()
+Counter.dec()
 
-console.log(number)  // 2
+console.log(Counter.number)  // 2
 
-reset()
+Counter.reset()
 
-console.log(number) // 0
+console.log(Counter.number) // 0
+
+window.Counter = Counter
