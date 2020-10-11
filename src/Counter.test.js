@@ -2,6 +2,13 @@ import * as Counter from './Counter'
 
 describe('Counter class tests', () => {
 
+    beforeAll(() => {})
+    beforeEach(() => {
+        Counter.reset()
+    })
+    afterAll(() => {})
+    afterEach(() => {})
+
     it('2. should store current number in `number` variable', () => {
         
         expect(Counter.number).toBeDefined()
@@ -10,13 +17,12 @@ describe('Counter class tests', () => {
     })
 
     it('3. should start from `0`', () => {
-       
+        
         expect(Counter.number).toBe(0)
 
     })
 
     it('4. should have `.inc` method that bumps the stored number by `1`', () => {
-
 
         expect(Counter.inc).toBeDefined()
         expect(Counter.inc).toBeInstanceOf(Function)
@@ -35,7 +41,7 @@ describe('Counter class tests', () => {
 
     })
 
-    it('6. should have `.reset` method overwrite that number to `0`', () => { 
+    it('6. should have `.reset` method overwrite that number to `0`', () => {
 
         Counter.inc()
         Counter.inc()
