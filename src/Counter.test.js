@@ -1,10 +1,14 @@
 import { Counter, DecreasingCounter } from './Counter'
 
+Counter.prototype.render = jest.fn()
+
+beforeEach(() => {
+    Counter.prototype.render.mockReset()
+})
+
 describe('Counter render', () => {
 
     it('should render when being created', () => {
-
-        Counter.prototype.render = jest.fn()
 
         const counter1 = new Counter()
 
@@ -13,8 +17,6 @@ describe('Counter render', () => {
     })
 
     it('should render when `.inc` is called', () => {
-
-        Counter.prototype.render = jest.fn()
 
         const counter1 = new Counter()
 
