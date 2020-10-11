@@ -1,9 +1,9 @@
 import { Counter, DecreasingCounter } from './Counter'
 
-Counter.prototype.render = jest.fn()
+Counter.prototype.render = jest.fn(Counter.prototype.render)
 
 beforeEach(() => {
-    Counter.prototype.render.mockReset()
+    Counter.prototype.render.mockClear()
 })
 
 describe('Counter render', () => {
