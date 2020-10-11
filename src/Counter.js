@@ -1,7 +1,21 @@
-export let number = 0
+export class Counter {
 
-export const inc = () => number = number + 1
+    constructor(number = 0) {
+        this.number = number
+    }
 
-export const dec = () => number = number - 1
+    inc() {
+        this.number = this.number + 1
+    }
 
-export const reset = () => number = 0
+    dec() {
+        this.number = this.number - 1
+    }
+
+    reset() {
+        this.number = 0
+    }
+
+}
+
+export default Counter
